@@ -1,24 +1,19 @@
+import ProductCard from "./ProductCard";
+
 const ProductList = ({ products, onProductClick }) => {
-    return (
-      <div>
-        {products.map((product) => (
-          <div
-            key={product.id}
-            onClick={() => onProductClick(product)}
-            style={{
-              border: "1px solid #ccc",
-              margin: "10px",
-              padding: "10px",
-              cursor: "pointer",
-            }}
-          >
-            <h4>{product.name}</h4>
-            <p>₹{product.price}</p>
-          </div>
-        ))}
-      </div>
-    );
-  };
-  
-  export default ProductList;
-  
+  if (!Array.isArray(products)) return null;
+
+  return (
+    <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
+      {products.map((product, index) => (
+        <ProductCard
+          key={`${product._id || product.id}-${index}`}
+          product={product}
+          onClick={onProductClick}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default ProductList;
