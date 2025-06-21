@@ -2,9 +2,11 @@ import Home from "./pages/Home";
 
 function App() {
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial" }}>
+    <>
+    <div style={{fontFamily: "Arial" }}>
       <Home />
     </div>
+    </>
   );
 }
 

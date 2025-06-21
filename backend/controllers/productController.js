@@ -1,28 +1,25 @@
-// controllers/productController.js
+const Product = require("../models/Product");
 
-const products = require("../data/products");
-
-// ✅ Function 1: Get All
-const getAllProducts = (req, res) => {
-  res.json(products);
-};
-
-// ✅ Function 2: Search Products
-const searchProducts = (req, res) => {
-  const query = req.query.query?.toLowerCase();
-  if (!query) {
-    return res.status(400).json({ message: "Query parameter is required" });
+const getAllProducts = async (req, res) => {
+  try {
+    const products = await Product.find();
+    res.json(products);
+  } catch (err) {
+    res.status(500).json({ message: "Error fetching products", err });
   }
-
-  const filtered = products.filter((product) =>
-    product.name.toLowerCase().includes(query)
-  );
-
-  res.json(filtered);
 };
 
-// ✅ Function 3: Log Clicks
-const clickLogs = [];
+const searchProducts = async (req, res) => {
+  const query = req.query.query?.toLowerCase();
+  try {
+    const products = await Product.find({
+      name: { $regex: query, $options: "i" },
+    });
+    res.json(products);
+  } catch (err) {
+    res.status(500).json({ message: "Search error", err });
+  }
+};
 
 const logProductClick = (req, res) => {
   const { productId } = req.body;
@@ -30,13 +27,10 @@ const logProductClick = (req, res) => {
     return res.status(400).json({ message: "Product ID is required" });
   }
 
-  clickLogs.push({ productId, timestamp: Date.now() });
-
-  console.log("Click logged:", productId);
-  res.status(201).json({ message: "Click logged successfully" });
+  console.log("Click logged for product:", productId);
+  res.status(201).json({ message: "Click logged" });
 };
 
-// ✅ Export All Functions
 module.exports = {
   getAllProducts,
   searchProducts,

@@ -10,6 +10,7 @@ const SearchBar = ({ onSearch }) => {
   };
 
   return (
+    <>
     <input
       type="text"
       placeholder="Search for a product..."
@@ -17,11 +18,13 @@ const SearchBar = ({ onSearch }) => {
       onChange={handleSearch}
       style={{
         padding: "10px",
+        margin: "70px" ,
         marginBottom: "20px",
         width: "100%",
         fontSize: "16px",
       }}
     />
+    </>
   );
 };
 

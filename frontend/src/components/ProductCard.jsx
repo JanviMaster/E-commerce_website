@@ -1,10 +1,9 @@
-// src/components/ProductCard.jsx
 const ProductCard = ({ product, onClick }) => {
     return (
       <div
         className="card"
         onClick={() => onClick(product.id)}
-        style={{ border: "1px solid #ccc", padding: "1rem", margin: "1rem" }}
+        style={{ border: "1px solid #ccc", padding: "20px", margin: "25px" }}
       >
         <h3>{product.name}</h3>
         <p>Category: {product.category}</p>
@@ -14,4 +13,5 @@ const ProductCard = ({ product, onClick }) => {
   };
   
   export default ProductCard;
+  
   

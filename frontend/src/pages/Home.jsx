@@ -40,8 +40,9 @@ const Home = () => {
   }, []);
 
   return (
-    <div style={{ padding: "2rem" }}>
-      <h1>Smart Shop 🛍️</h1>
+    <>
+      <div style={{paddingRight: "340 px ", paddingLeft:"340px",}}>
+      <center><h1>Smart Shop 🛍️</h1></center>
       <input
         type="text"
         placeholder="Search for products..."
@@ -50,13 +51,15 @@ const Home = () => {
         style={{ padding: "0.5rem", width: "300px", marginRight: "1rem" }}
       />
       <button onClick={handleSearch}>Search</button>
-
+      </div>
+      <div style={{ padding: "10px" }}>
       <div>
         {products.map((product) => (
           <ProductCard key={product.id} product={product} onClick={handleProductClick} />
         ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
