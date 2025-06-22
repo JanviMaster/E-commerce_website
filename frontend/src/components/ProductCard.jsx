@@ -2,14 +2,15 @@ const ProductCard = ({ product, onClick }) => {
   if (!product) return null;
 
   return (
+    <>
     <div
       onClick={() => onClick(product)}
       style={{
         border: "1px solid #ccc",
-        padding: "1rem",
-        width: "220px",
+        margin:"10px",
+        padding: "10px",
+        width: "250px",
         borderRadius: "8px",
-        // boxShadow: "0 2px 5px rgba(0,0,0,0.1)",
         cursor: "pointer",
       }}
     >
@@ -30,6 +31,7 @@ const ProductCard = ({ product, onClick }) => {
       <p><strong>Rating⭐:</strong> {product.rating}</p>
       <p><strong>Price:</strong> ₹{product.price}</p>
     </div>
+    </>
   );
 };
 

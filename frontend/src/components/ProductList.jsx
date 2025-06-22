@@ -4,6 +4,7 @@ const ProductList = ({ products, onProductClick }) => {
   if (!Array.isArray(products)) return null;
 
   return (
+    <>
     <div style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
       {products.map((product, index) => (
         <ProductCard
@@ -13,6 +14,7 @@ const ProductList = ({ products, onProductClick }) => {
         />
       ))}
     </div>
+    </>
   );
 };
 

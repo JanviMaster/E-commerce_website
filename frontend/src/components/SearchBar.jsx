@@ -1,4 +1,6 @@
 import { useState } from "react";
+import './components.css';
+
 
 const SearchBar = ({ onSearch }) => {
   const [query, setQuery] = useState("");
@@ -11,19 +13,20 @@ const SearchBar = ({ onSearch }) => {
 
   return (
     <>
-    <input
-      type="text"
-      placeholder="Search for a product..."
-      value={query}
-      onChange={handleSearch}
-      style={{
-        padding: "10px",
-        margin: "70px" ,
-        marginBottom: "20px",
-        width: "100%",
-        fontSize: "16px",
-      }}
-    />
+    <nav className="pd:10">
+    <div className="container-fluid">
+    <form className="d-flex" role="search">
+      <input
+        className="form-control me-2 rounded-pill border-2 border-secondary focus-glow"
+        type="text"
+        placeholder="Search for a product..."
+        value={query}
+        onChange={handleSearch}
+        aria-label="Search"
+      />
+    </form>
+  </div>
+</nav>
     </>
   );
 };

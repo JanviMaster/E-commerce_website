@@ -6,6 +6,10 @@ require("dotenv").config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
+const scraperRoutes = require("./routes/scraperRoutes");
+
+// After other routes
+// app.use("/api/scrape", scraperRoutes);
 
 app.use(cors());
 app.use(express.json());

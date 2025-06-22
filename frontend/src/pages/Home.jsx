@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import ProductList from "../components/ProductList";
 import SearchBar from "../components/SearchBar";
+import './Page.css';
 
 function Home() {
   const [products, setProducts] = useState([]);
@@ -75,11 +76,12 @@ function Home() {
       : [];
 
   return (
-    <div style={{ padding: "20px", fontFamily: "Arial" }}>
-      <h1>Smart Shop 🛍️</h1>
-
+    <>
+    <div style={{  fontFamily: "Arial" }}>
+      <center><h1 style={{fontSize:"70px"}} >Smart Shop 🛍️</h1></center>
+      <br/>
       <SearchBar onSearch={handleSearch} />
-
+      <br/><br/>
       <h3>{searchQuery ? "Search Results:" : "All Products"}</h3>
       <ProductList products={products} onProductClick={handleProductClick} />
 
@@ -116,6 +118,7 @@ function Home() {
         </div>
       )}
     </div>
+    </>
   );
 }
 
