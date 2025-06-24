@@ -8,13 +8,16 @@ function Home() {
   const [products, setProducts] = useState([]);
   const [searchQuery, setSearchQuery] = useState("");
   const [clickedHistory, setClickedHistory] = useState([]);
+  const [error, setError] = useState(null); 
 
   const fetchProducts = async () => {
     try {
       const response = await axios.get("http://localhost:5000/api/products");
       setProducts(response.data);
+      setError(null); 
     } catch (error) {
       console.error("Error fetching products:", error);
+      setError("No products found: Check internet connection");
     }
   };
 
@@ -24,8 +27,10 @@ function Home() {
         `http://localhost:5000/api/products/search?query=${query}`
       );
       setProducts(response.data);
+      setError(null); 
     } catch (error) {
       console.error("Search failed:", error);
+      setError("No products found: Check internet connection");
     }
   };
 
@@ -77,47 +82,69 @@ function Home() {
 
   return (
     <>
-    <div style={{  fontFamily: "Arial" }}>
-      <center><h1 style={{fontSize:"70px"}} >Smart Shop 🛍️</h1></center>
-      <br/>
-      <SearchBar onSearch={handleSearch} />
-      <br/><br/>
-      <h3>{searchQuery ? "Search Results:" : "All Products"}</h3>
-      <ProductList products={products} onProductClick={handleProductClick} />
+      <div style={{ fontFamily: "Arial" }}>
+        <center><h1 style={{ fontSize: "70px" }}>Smart Shop 🛍️</h1></center>
+        <br />
+        <SearchBar onSearch={handleSearch} />
+        <br /><br />
 
-      {searchQuery && recommendedFromSearch.length > 0 && (
-        <>
-          <h3>Recommended (based on search):</h3>
-          <ProductList
-            products={recommendedFromSearch}
-            onProductClick={handleProductClick}
-          />
-        </>
-      )}
+        {error && (
+          <div className="error-message" style={{ 
+            color: "#b30000", 
+            backgroundColor: "#ffe6e6", 
+            border: "1px solid #ff4d4d", 
+            borderRadius: "10px", 
+            padding: "1rem", 
+            margin:"1rem",
+            marginLeft:"12rem",
+            marginRight:"12rem",
+            textAlign: "center", 
+            fontWeight: "bold" 
+          }}>
+            {error}
+          </div>
+        )}
 
-      {!searchQuery && recommendedFromClick.length > 0 && (
-        <>
-          <h3>Recommended (based on last clicked):</h3>
-          <ProductList
-            products={recommendedFromClick}
-            onProductClick={handleProductClick}
-          />
-        </>
-      )}
+        {!error && (
+          <>
+            <h3>{searchQuery ? "Search Results:" : "All Products"}</h3>
+            <ProductList products={products} onProductClick={handleProductClick} />
 
-      {clickedHistory.length > 0 && (
-        <div>
-          <h3>Previously Clicked:</h3>
-          <ul>
-            {clickedHistory.map((p, index) => (
-              <li key={`${p._id || p.id}-${index}`}>
-                {p.name} — ₹{p.price}
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-    </div>
+            {searchQuery && recommendedFromSearch.length > 0 && (
+              <>
+                <h3>Recommended (based on search):</h3>
+                <ProductList
+                  products={recommendedFromSearch}
+                  onProductClick={handleProductClick}
+                />
+              </>
+            )}
+
+            {!searchQuery && recommendedFromClick.length > 0 && (
+              <>
+                <h3>Recommended (based on last clicked):</h3>
+                <ProductList
+                  products={recommendedFromClick}
+                  onProductClick={handleProductClick}
+                />
+              </>
+            )}
+
+            {clickedHistory.length > 0 && (
+              <div>
+                <h3>Previously Clicked:</h3>
+                <ul>
+                  {clickedHistory.map((p, index) => (
+                    <li key={`${p._id || p.id}-${index}`}>
+                      {p.name} — ₹{p.price}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </>
+        )}
+      </div>
     </>
   );
 }
