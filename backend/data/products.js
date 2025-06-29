@@ -4,15 +4,16 @@ const products = [
     brand: "Nike",
     category: "Shoes",
     price: 2500,
-    image: "https://via.placeholder.com/150?text=Nike+Shoes",
+    // image: "https://source.unsplash.com/150x150/?puma,hoodie",
     rating: 4.5,
   },
+
   {
     name: "Adidas Sneakers",
     brand: "Adidas",
     category: "Shoes",
     price: 2800,
-    image: "https://via.placeholder.com/150?text=Adidas+Sneakers",
+    // image: "https://via.placeholder.com/150?text=Adidas+Sneakers",
     rating: 4.0,
   },
   {
@@ -20,7 +21,7 @@ const products = [
     brand: "Puma",
     category: "Clothing",
     price: 1500,
-    image: "https://via.placeholder.com/150?text=Puma+Hoodie",
+    // image: "https://via.placeholder.com/150?text=Puma+Hoodie",
     rating: 4.2,
   },
   {
@@ -28,7 +29,7 @@ const products = [
     brand: "Apple",
     category: "Accessories",
     price: 22000,
-    image: "https://via.placeholder.com/150?text=Apple+Watch",
+    // image: "https://via.placeholder.com/150?text=Apple+Watch",
     rating: 4.8,
   },
   {
@@ -36,7 +37,7 @@ const products = [
     brand: "Generic",
     category: "Accessories",
     price: 400,
-    image: "https://via.placeholder.com/150?text=Phone+Case",
+    // image: "https://via.placeholder.com/150?text=Phone+Case",
     rating: 3.9,
   },
 ];

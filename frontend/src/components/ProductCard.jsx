@@ -14,7 +14,7 @@ const ProductCard = ({ product, onClick }) => {
         cursor: "pointer",
       }}
     >
-      <img
+      {/* <img
         src={product.image}
         alt={product.name}
         style={{
@@ -24,7 +24,7 @@ const ProductCard = ({ product, onClick }) => {
           marginBottom: "10px",
           borderRadius: "4px",
         }}
-      />
+      /> */}
       <h4>{product.name}</h4>
       <p><strong>Brand:</strong> {product.brand}</p>
       <p><strong>Category:</strong> {product.category}</p>

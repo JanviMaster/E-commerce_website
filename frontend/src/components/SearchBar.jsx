@@ -13,13 +13,13 @@ const SearchBar = ({ onSearch }) => {
 
   return (
     <>
-    <nav className="pd:10">
+    <nav className="pd-10">
     <div className="container-fluid">
     <form className="d-flex" role="search">
       <input
         className="form-control me-2 rounded-pill border-2 border-secondary focus-glow"
         type="text"
-        placeholder="Search for a product..."
+        placeholder ="Search for a product..."
         value={query}
         onChange={handleSearch}
         aria-label="Search"
