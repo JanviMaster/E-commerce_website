@@ -10,20 +10,13 @@
   color:black;
   background-color: black !important;
   border-color: rgb(0, 255, 255) !important;
-  /* color: white !important; */
-  /* box-shadow: 0 0 10px rgb(255, 255, 255); */
   outline: none;
 }
-/* .custom-search-bar {
-  background-color: #000 !important;
-  width: 400px;
-  padding: 10px 20px;
-  color: #000;
+/* .navbar-brand {
+  color: #c9d1d9cc;
+}
+.offcanvas-title {
+    color: #c9d1d9cc;
 } */
 
-/* .focus-glow:focus {
-  background-color: black !important;
-  outline: none;
-  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.8); 
-  border-color: white;
-} */
+

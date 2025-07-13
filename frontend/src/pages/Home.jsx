@@ -83,7 +83,6 @@ function Home() {
   return (
     <>
       <div style={{ fontFamily: "Arial" }}>
-        <center><h1 style={{ fontSize: "70px" }}>Smart Shop 🛍️</h1></center>
         <br />
         <SearchBar onSearch={handleSearch} />
         <br /><br />

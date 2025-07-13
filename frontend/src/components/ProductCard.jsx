@@ -1,3 +1,4 @@
+
 const ProductCard = ({ product, onClick }) => {
   if (!product) return null;
 
