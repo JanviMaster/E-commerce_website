@@ -7,7 +7,7 @@ import React from 'react';
 const Dashboard = () => {
   return (
     <>
-    <div>
+    <div className='app'>
       {/* <Card/> */}
       <div className="p-10 py-24">
         <div className="flex justify-between ">

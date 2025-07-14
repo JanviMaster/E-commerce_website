@@ -19,7 +19,7 @@ const SearchBar = ({ onSearch }) => {
       <input
         className="form-control me-2 rounded-pill border-2 border-secondary focus-glow"
         type="text"
-        placeholder ="Search for a product..."
+        placeholder = "Search for a product..."
         value={query}
         onChange={handleSearch}
         aria-label="Search"

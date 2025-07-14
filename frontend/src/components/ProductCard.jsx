@@ -1,19 +1,20 @@
+import React from 'react';
 
 const ProductCard = ({ product, onClick }) => {
   if (!product) return null;
 
   return (
     <>
-    <div
+    <div className='product-card'
       onClick={() => onClick(product)}
-      style={{
-        border: "1px solid #ccc",
-        margin:"10px",
-        padding: "10px",
-        width: "250px",
-        borderRadius: "8px",
-        cursor: "pointer",
-      }}
+      // style={{
+      //   border: "1px solid #ccc",
+      //   margin:"10px",
+      //   padding: "10px",
+      //   width: "250px",
+      //   borderRadius: "8px",
+      //   cursor: "pointer",
+      // }}
     >
       {/* <img
         src={product.image}
@@ -26,11 +27,11 @@ const ProductCard = ({ product, onClick }) => {
           borderRadius: "4px",
         }}
       /> */}
-      <h4>{product.name}</h4>
-      <p><strong>Brand:</strong> {product.brand}</p>
-      <p><strong>Category:</strong> {product.category}</p>
-      <p><strong>Rating⭐:</strong> {product.rating}</p>
-      <p><strong>Price:</strong> ₹{product.price}</p>
+      <h4 className='product-name'>{product.name}</h4>
+      <div className='product-brand'><strong className='product-brand'> Brand: </strong> {product.brand}</div>
+      <p className='product-category'><strong className='product-category'>Category:</strong> {product.category}</p>
+      <p className='product-rating'><strong className='product-rating'>⭐Rating:</strong> {product.rating}</p>
+      <p className='product-price'><strong className='product-price'>Price:</strong> ₹{product.price}</p>
     </div>
     </>
   );

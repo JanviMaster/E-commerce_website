@@ -82,24 +82,13 @@ function Home() {
 
   return (
     <>
-      <div style={{ fontFamily: "Arial" }}>
+      <div className='app'>
         <br />
         <SearchBar onSearch={handleSearch} />
         <br /><br />
 
         {error && (
-          <div className="error-message" style={{ 
-            color: "#b30000", 
-            backgroundColor: "#ffe6e6", 
-            border: "1px solid #ff4d4d", 
-            borderRadius: "10px", 
-            padding: "1rem", 
-            margin:"1rem",
-            marginLeft:"12rem",
-            marginRight:"12rem",
-            textAlign: "center", 
-            fontWeight: "bold" 
-          }}>
+          <div className="error-message" >
             {error}
           </div>
         )}

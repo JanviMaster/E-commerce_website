@@ -7,16 +7,20 @@
   /* color:#f8fafc; */
   color: #c9d1d9cc;
   /* background-color: #000000; */
-  /* background-color: #0f172a; tailwind */
   background-color: #0d1117;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding:"100px"
 }
+
 .card {
   background: #161b22;
   border-color : #30363d solid ;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
 }
 /* .a {
   font-weight: 500;
@@ -29,4 +33,21 @@
 .h1 {
   font-size: 60px;
   line-height: 1.1;
+}
+
+/* home */
+.error-message{
+            color: #b30000;
+            background-color: #ffe6e699 ;
+            border: 1px solid #ff4d4d;
+            border-radius: 10px;
+            padding: 1rem;
+            margin:1rem;
+            margin-left:12rem;
+            margin-right:12rem;
+            text-align: center;
+            font-weight: bold ;
+}
+.app{
+  padding: 100px;
 }
