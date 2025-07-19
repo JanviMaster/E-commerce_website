@@ -88,7 +88,7 @@ function Home() {
         <br /><br />
 
         {error && (
-          <div className="error-message" >
+          <div className="error" >
             {error}
           </div>
         )}

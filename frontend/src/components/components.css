@@ -1,5 +1,8 @@
 /* navbar */
+.navbar{
+    border: 1px solid #30363d;
 
+}
 /* .navbar-brand {
   color: #c9d1d9cc;
 }
@@ -48,12 +51,33 @@ h1{
 .product-name , .product-brand , .product-category , .product-rating , .product-price{
   background-color:#161b22;
 }
+.footer {
+  background-color: #161b22;
+  color: white;
+    border: 1px solid #30363d;
 
-/* Product-list */
+}
+
+.footer .container,
+.footer .row,
+.footer .col-md-3,
+.footer ul,
+.footer li,
+.footer .text-center ,.text-uppercase , .text-light ,.d {
+  background-color: inherit;
+  color: inherit;
+}
+
+.custom-border {
+  border-color: #30363d;
+}
+/* 
+.text-uppercase , .text-light ,.d {
+  background-color: #161b22;
+} */
 
 .List{
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
 }
-

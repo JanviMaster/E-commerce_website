@@ -9,9 +9,15 @@ const Navbar = () => {
       <nav className="navbar navbar-dark  fixed-top">
   <div className="container-fluid">
     <div>
-    <img src="logo.svg" alt="Logo" width="30" height="24" className="d-inline-block align-text-top"></img>
-    <Link className="navbar-brand" to="/">
-       🛍️ Smart Shop
+    <img 
+      src="/vite.svg"
+      alt="Logo" 
+      width="30" 
+      height="24" 
+      className="d-inline-block align-text-top">
+    </img>
+    <Link className="navbar-brand " to="/">
+        Smart Shop
     </Link>
     </div>
     <button
@@ -32,7 +38,7 @@ const Navbar = () => {
     >
       <div className="offcanvas-header">
         <h5 className="offcanvas-title" id="offcanvasDarkNavbarLabel">
-          🛍️ Smart Shop
+           Smart Shop
         </h5>
         <button
           type="button"

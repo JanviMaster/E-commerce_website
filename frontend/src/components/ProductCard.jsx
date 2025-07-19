@@ -6,17 +6,8 @@ const ProductCard = ({ product, onClick }) => {
   return (
     <>
     <div className='product-card'
-      onClick={() => onClick(product)}
-      // style={{
-      //   border: "1px solid #ccc",
-      //   margin:"10px",
-      //   padding: "10px",
-      //   width: "250px",
-      //   borderRadius: "8px",
-      //   cursor: "pointer",
-      // }}
-    >
-      {/* <img
+      onClick={() => onClick(product)}>
+      <img
         src={product.image}
         alt={product.name}
         style={{
@@ -26,7 +17,7 @@ const ProductCard = ({ product, onClick }) => {
           marginBottom: "10px",
           borderRadius: "4px",
         }}
-      /> */}
+      />
       <h4 className='product-name'>{product.name}</h4>
       <div className='product-brand'><strong className='product-brand'> Brand: </strong> {product.brand}</div>
       <p className='product-category'><strong className='product-category'>Category:</strong> {product.category}</p>
