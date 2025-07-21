@@ -3,9 +3,7 @@ import React from 'react'
 const Explore = () => {
   return (
     <>
-    <div className='app'>
-      hello explore
-    </div>
+    <div className='app'> explore page </div>
     </>
   )
 }

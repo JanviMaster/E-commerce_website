@@ -9,13 +9,7 @@ const Navbar = () => {
       <nav className="navbar navbar-dark  fixed-top">
   <div className="container-fluid">
     <div>
-    <img 
-      src="/vite.svg"
-      alt="Logo" 
-      width="30" 
-      height="24" 
-      className="d-inline-block align-text-top">
-    </img>
+    <img src="/vite.svg" alt="Logo" width="30" height="24" className="d-inline-block align-text-top"></img>
     <Link className="navbar-brand " to="/">
         Smart Shop
     </Link>

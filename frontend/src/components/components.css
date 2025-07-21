@@ -1,8 +1,14 @@
 /* navbar */
 .navbar{
     border: 1px solid #30363d;
-
 }
+.offcanvas {
+    border: 1px solid #30363d;
+}
+/* navbar-toggler{
+  border: 1px solid #30363d;
+} */
+
 /* .navbar-brand {
   color: #c9d1d9cc;
 }
